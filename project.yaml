@@ -1,0 +1,24 @@
+name: StageCam
+options:
+  bundleIdPrefix: com.stagecam
+  deploymentTarget:
+    iOS: "17.2"
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    PRODUCT_BUNDLE_IDENTIFIER: com.stagecam.recorder
+targets:
+  StageCam:
+    type: application
+    platform: iOS
+    sources:
+      - StageCam
+    info:
+      path: StageCam/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: "StageCam needs camera access to record your video."
+        NSMicrophoneUsageDescription: "StageCam needs microphone access to record audio with your video."
+        NSPhotoLibraryAddUsageDescription: "StageCam needs permission to save recorded videos to your Photos library."
